@@ -1,8 +1,11 @@
 <form class="ui form">
 <h1>{{editHeader}}</h1>
+  <i>Поля, отмеченные <span class="required-star">*</span>обязательны для заполнения</i>
+  <br>
+  
   <div class="field">
     <label>{{name}} <span class="required-star">*</span></label>
-    <input type="text" name="name" placeholder="Фамилия Имя Отчество" required [(ngModel)]="employee.name">
+    <input type="text" name="name" placeholder="Фамилия Имя Отчество" [(ngModel)]="employee.name">
   </div>
 
   <div class="field">
@@ -13,12 +16,20 @@
   <div class="field">
     <label>{{gender}} <span class="required-star">*</span></label>
       <select [(ngModel)] = "employee.gender" name= "Пол">
-        <option *ngFor = "let gen of genders" required [value]="gen">{{gen}}</option>
+        <option *ngFor = "let gen of genders" [value]="gen">{{gen}}</option>
       </select>
   </div>
 
   
   <button class="ui button" type="submit" [disabled]="!isNew()" (click)="addEmployee()">
-    подтвердить
+    Подтвердить
   </button>
+  <i data-tooltip="Если сотрудник не добавляется в список,
+    проверьте, заполнены ли все обязательные поля"data-position="top left">
+  <i class="help circle icon"></i></i>
 </form>
+<script>
+$('.ui.modal')
+  .modal('show')
+;
+</script>

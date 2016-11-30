@@ -45,5 +45,6 @@ export class AppComponent {
     saveEmployee(emp: Employee) {
         this.employees.push(emp);
         this.addNewEmployee();
+        alert("Cодрудник добавлен");
     }
 }
