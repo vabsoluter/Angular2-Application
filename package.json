@@ -11,7 +11,7 @@
     "typings": "typings"
   },
   "keywords": [],
-  "author": "",
+  "author": "Vladislav Basimov",
   "license": "ISC",
   "dependencies": {
     "@angular/common": "2.0.0-rc.2",

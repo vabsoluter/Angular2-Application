@@ -27,7 +27,6 @@ export class EditEmployeeComponent {
     }
 
     addEmployee() {
-        console.log("name:", this.employee.name)
         if(this.employee.name!=undefined && this.employee.gender!= undefined){
             this.saveEployee.emit(this.employee);
         }
