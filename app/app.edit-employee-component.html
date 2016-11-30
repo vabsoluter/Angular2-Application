@@ -1,0 +1,24 @@
+<form class="ui form">
+<h1>{{editHeader}}</h1>
+  <div class="field">
+    <label>{{name}} <span class="required-star">*</span></label>
+    <input type="text" name="name" placeholder="Фамилия Имя Отчество" required [(ngModel)]="employee.name">
+  </div>
+
+  <div class="field">
+    <label>{{pos}}</label>
+    <input type="text" name="pos" placeholder="Должность" [(ngModel)]="employee.pos">
+  </div>
+
+  <div class="field">
+    <label>{{gender}} <span class="required-star">*</span></label>
+      <select [(ngModel)] = "employee.gender" name= "Пол">
+        <option *ngFor = "let gen of genders" required [value]="gen">{{gen}}</option>
+      </select>
+  </div>
+
+  
+  <button class="ui button" type="submit" [disabled]="!isNew()" (click)="addEmployee()">
+    подтвердить
+  </button>
+</form>

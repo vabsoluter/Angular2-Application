@@ -1,0 +1,64 @@
+<nav class="ui attached menu">
+    <div class="ui container">
+        <div class="header item">
+            <h1 class = "logo"><i class="users icon"></i> {{ title }}</h1>
+        </div>
+    </div>
+
+    <div></div>
+    
+</nav>
+
+<div class="ui container">
+    <div class="ui grid" style="margin-top: 20px;">
+
+        
+
+        <div class="four wide column">
+            <employee-list [employees]="employees"
+                            (edit)="editEmployee($event)"
+                            (remove)="removeEmployee($event)">
+            </employee-list>
+        </div>
+
+        <div class="twelve wide column">
+            <div class="ui segment">
+                <div class="ui text container">
+                    <edit-employee-form
+                        [employee]="employee"
+                        [isNewEmployee]="isNewEmployee"
+                        (saveEployee)="saveEmployee($event)">
+                    </edit-employee-form>
+                    <button class="ui primary button" type="submit" (click)="addNewEmployee()">
+                        <i class="add user icon"></i>
+                        Добавить сотрудника
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<nav class="ui black inverted vertical footer segment" style="margin-top: 40px;">
+    <div class="ui center aligned container">
+    
+        <div class="ui feed">
+            <div class="event">
+                <div class="label">
+                    <img src="{{developerSrc}}">
+                </div>
+                <div class="content">
+                    <p>developed by Vladislav Basimov <br> <a class="footerWhite" href="mailto:vabsoluter@gmail.com">vabsoluter@gmail.com</a></p>
+                </div>
+            </div>
+            
+            <div class="ui inverted section divider"></div>
+            <div class="footerWhite">
+                <a href="https://petrsu.ru/">Петрозаводский Государственный университет</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+   

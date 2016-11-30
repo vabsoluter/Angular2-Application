@@ -1,0 +1,17 @@
+<div class="ui cards">
+    <div *ngFor = "let e of employees" class = "card">
+        <div class="content">
+            <img class="right floated mini ui image" [src]="getImageUrl(e)">
+            <div class="header">
+                {{e.name}}
+            </div>
+            <div class="meta">{{e.pos}}</div> 
+        </div>
+        <div class="extra content">
+            <div class="ui two buttons">
+                <div class="ui basic green button" (click)="editEmployee(e)">Редактировать</div>
+                <div class="ui basic red button" (click)="removeEmployee(e)">Удалить</div>
+            </div>
+        </div>
+    </div>
+</div>

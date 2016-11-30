@@ -1,0 +1,27 @@
+.ui.segment.form {
+    margin-top: 3rem;
+}
+
+.header.item {
+    max-width: 260.75px;
+}
+.ui.segment{
+    max-height: 390px;
+}
+.ui.attached.menu{
+    background-color:#0E6EB8;
+}
+.ui.attached{
+    background-color:#0E6EB8;
+}
+.logo{
+    color: white;
+}
+.footerWhite{
+    color: lightsteelblue;
+}
+.ui.center.aligned.container{
+    margin-top: 20px;
+    margin-bottom:20px;
+    text-align:center
+}
