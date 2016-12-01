@@ -27,12 +27,12 @@ let's start. Have a fun!
 ```
 $ npm start
 ```
-Installation
 -----------
 
 Windows installation steps:
 ---
 1) download nodejs installer version 6.9 or above from official site http://nodejs.ru/
+
 2) after installation typescript run command in cmd: 
 ```
  npm install -g typescript
